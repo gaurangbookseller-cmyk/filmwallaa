@@ -7,7 +7,11 @@ import LoadingSpinner from './LoadingSpinner';
 import ErrorMessage from './ErrorMessage';
 
 const Hero = () => {
-  const featuredMovie = featuredMovies[0];
+  const { movies: featuredMovies, loading, error } = useFeaturedMovies();
+  
+  if (loading) {
+    return (
+      <section className=\"h-[80vh] flex items-center justify-center bg-gradient-to-r from-orange-600 via-red-600 to-pink-600\">\n        <LoadingSpinner size=\"lg\" className=\"text-white\" />\n        <span className=\"ml-4 text-white text-xl\">Loading featured movies...</span>\n      </section>\n    );\n  }\n  \n  if (error || !featuredMovies.length) {\n    return (\n      <section className=\"h-[80vh] flex items-center justify-center bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 px-4\">\n        <ErrorMessage \n          message={error || \"No featured movies available\"} \n          className=\"max-w-md bg-white/10 border-white/20 text-white\"\n        />\n      </section>\n    );\n  }\n  \n  const featuredMovie = featuredMovies[0];
 
   return (
     <section className="relative h-[80vh] overflow-hidden">
