@@ -30,7 +30,7 @@ const Header = () => {
       {/* Top Bar */}
       <div className="bg-black/20 text-white text-xs py-2">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-          <span>Filmwalla.com - Your Gateway to Indian Entertainment</span>
+          <span>Filmwalla.com - Your Gateway to Entertainment</span>
           <div className="flex items-center space-x-4">
             <span>Today: {new Date().toLocaleDateString('en-US', { 
               weekday: 'long', 
