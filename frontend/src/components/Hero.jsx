@@ -124,7 +124,7 @@ const Hero = () => {
 
           {/* Cast */}
           <div className="pt-4 border-t border-white/20">
-            <p className="text-sm text-gray-400 mb-2">मुख्य कलाकार • Starring:</p>
+            <p className="text-sm text-gray-400 mb-2">Starring:</p>
             <div className="flex flex-wrap gap-2">
               {featuredMovie.cast.map((actor, index) => (
                 <span key={index} className="text-white font-medium">
