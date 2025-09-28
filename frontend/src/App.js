@@ -8,6 +8,7 @@ import QuickSubscribe from './components/QuickSubscribe';
 import MainLayout from './components/layout/MainLayout';
 import InlineAd from './components/ads/InlineAd';
 import { Toaster } from './components/ui/sonner';
+import React, { useState, useEffect } from 'react';
 
 const Home = () => {
   return (
