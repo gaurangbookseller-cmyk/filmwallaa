@@ -14,18 +14,27 @@ const Home = () => {
       <Hero />
       <FeaturedReviews />
       
+      {/* Newsletter Subscription */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <QuickSubscribe size="large" className="mx-auto" />
+        </div>
+      </section>
+      
       {/* Placeholder sections for future development */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">फिल्म समाचार</h2>
-          <p className="text-gray-600">Latest cinema news coming soon...</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Cinema News</h2>
+          <h3 className="text-xl text-gray-700 mb-4">फिल्म समाचार</h3>
+          <p className="text-gray-600">Breaking entertainment news and industry updates coming soon...</p>
         </div>
       </section>
       
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">श्रेणियां</h2>
-          <p className="text-gray-600">Movie categories and collections coming soon...</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Movie Categories</h2>
+          <h3 className="text-xl text-gray-700 mb-4">श्रेणियां</h3>
+          <p className="text-gray-600">Bollywood, South Cinema, International collections coming soon...</p>
         </div>
       </section>
     </div>
