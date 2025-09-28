@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import FeaturedReviews from './components/FeaturedReviews';
 import QuickSubscribe from './components/QuickSubscribe';
+import MainLayout from './components/layout/MainLayout';
+import InlineAd from './components/ads/InlineAd';
 import { Toaster } from './components/ui/sonner';
 
 const Home = () => {
