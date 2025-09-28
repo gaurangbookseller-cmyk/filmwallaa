@@ -41,7 +41,7 @@ class EmailService:
     
     def send_welcome_email(self, email: str, name: str = None):
         """Send welcome email to new subscribers"""
-        subject = "Welcome to The Voice of Cinema! 🎬"
+        subject = "Welcome to Filmwalla.com! 🎬"
         
         html_template = Template("""
         <!DOCTYPE html>
