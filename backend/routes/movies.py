@@ -41,6 +41,7 @@ async def get_featured_movies():
             # Check if movie already exists
             existing_movie = await db.movies.find_one({"tmdb_id": movie_data['tmdb_id']})
             if existing_movie:
+                existing_movie['id'] = str(existing_movie.pop('_id'))
                 featured_movies.append(MovieResponse(**existing_movie))
             else:
                 # Insert new movie
