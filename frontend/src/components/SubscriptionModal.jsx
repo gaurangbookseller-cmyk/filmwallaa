@@ -73,7 +73,7 @@ const SubscriptionModal = ({ isOpen, onClose, onSuccess }) => {
             </div>
             <div>
               <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                Join The Voice of Cinema
+                Join Filmwalla.com
               </DialogTitle>
               <DialogDescription className="text-gray-600">
                 Get weekly cinema reviews delivered to your inbox
