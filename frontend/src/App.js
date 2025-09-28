@@ -211,11 +211,12 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/reviews" element={<div className="p-8 text-center">Reviews page coming soon...</div>} />
-          <Route path="/news" element={<div className="p-8 text-center">News page coming soon...</div>} />
-          <Route path="/bollywood" element={<div className="p-8 text-center">Bollywood page coming soon...</div>} />
-          <Route path="/south" element={<div className="p-8 text-center">South Cinema page coming soon...</div>} />
-          <Route path="/international" element={<div className="p-8 text-center">International page coming soon...</div>} />
+          <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/bollywood" element={<ReviewsPage />} />
+          <Route path="/south" element={<ReviewsPage />} />
+          <Route path="/international" element={<ReviewsPage />} />
           <Route path="/admin/migration" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
