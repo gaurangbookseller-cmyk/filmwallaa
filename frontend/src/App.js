@@ -50,7 +50,7 @@ const Home = () => {
   );
 };
 
-import AdminMigration from './pages/AdminMigration';
+// import AdminMigration from './pages/AdminMigration';
 
 function App() {
   return (
