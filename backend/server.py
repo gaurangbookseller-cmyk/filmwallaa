@@ -1,7 +1,3 @@
-# Import route modules
-from routes.movies import router as movies_router
-from routes.reviews import router as reviews_router
-
 from fastapi import FastAPI, APIRouter
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
