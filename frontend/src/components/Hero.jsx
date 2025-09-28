@@ -50,7 +50,7 @@ const Hero = () => {
           {/* Movie Badge */}
           <div className="flex items-center space-x-3">
             <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 px-3 py-1">
-              फीचर्ड रिव्यू • Featured Review
+              Featured Review
             </Badge>
             <Badge variant="outline" className="border-white/30 text-white">
               {featuredMovie.industry}
