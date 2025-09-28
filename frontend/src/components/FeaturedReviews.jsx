@@ -3,7 +3,9 @@ import { Star, Clock, ArrowRight, Eye } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { latestReviews } from '../data/mockData';
+import { useLatestReviews } from '../hooks/useReviews';
+import LoadingSpinner from './LoadingSpinner';
+import ErrorMessage from './ErrorMessage';
 
 const FeaturedReviews = () => {
   return (
