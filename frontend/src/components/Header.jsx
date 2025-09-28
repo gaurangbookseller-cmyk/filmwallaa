@@ -41,7 +41,7 @@ const Header = () => {
               <DropdownMenuContent>
                 {supportedLanguages.map((lang) => (
                   <DropdownMenuItem key={lang.code} onClick={() => setCurrentLang(lang.code)}>
-                    {lang.name} ({lang.nameEng})
+                    {lang.name} ({lang.nameRegional})
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
