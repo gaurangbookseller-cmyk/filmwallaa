@@ -42,7 +42,7 @@ async def root():
 async def health_check():
     return {
         "status": "healthy",
-        "service": "The Voice of Cinema API", 
+        "service": "Filmwalla.com API", 
         "version": "1.0.0",
         "timestamp": datetime.utcnow()
     }
