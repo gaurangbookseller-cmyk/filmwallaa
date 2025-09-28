@@ -59,8 +59,8 @@ const Header = () => {
               <Star className="h-8 w-8 text-yellow-300 fill-current" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-white">सिनेमा समीक्षा</h1>
-              <p className="text-orange-200 text-sm">Cinema Samiksha</p>
+              <h1 className="text-2xl font-bold text-white">The Voice of Cinema</h1>
+              <p className="text-orange-200 text-sm">सिनेमा समीक्षा</p>
             </div>
           </div>
 
