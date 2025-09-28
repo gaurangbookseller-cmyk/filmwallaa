@@ -116,30 +116,39 @@ backend:
         - working: true
         - agent: "main"
         - comment: "FastAPI server with CORS, MongoDB connection, and health check endpoints implemented"
+        - working: true
+        - agent: "testing"
+        - comment: "✅ TESTED: Health endpoints (/api/, /api/health) working correctly. Server running on port 8001 with proper CORS configuration."
 
   - task: "TMDB Movie Integration" 
     implemented: true
-    working: "unknown"
+    working: true
     file: "routes/movies.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "unknown"
         - agent: "main" 
         - comment: "TMDB service integrated with featured movies, search, and movie details endpoints - needs testing"
+        - working: true
+        - agent: "testing"
+        - comment: "✅ TESTED: All movie endpoints working. Featured movies (/api/movies/featured) returns 4 movies with TMDB data. Search (/api/movies/search) working with query validation. Movie details endpoint fixed and working. TMDB API key functional with proper poster URLs from image.tmdb.org."
 
   - task: "Editorial Reviews API"
     implemented: true
-    working: "unknown"
+    working: true
     file: "routes/reviews.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "unknown"
         - agent: "main"
         - comment: "Reviews API with mock data fallback - needs testing with real data"
+        - working: true
+        - agent: "testing"
+        - comment: "✅ TESTED: Reviews endpoint (/api/reviews/latest) working correctly. Fixed missing 'featured' field in mock data. Returns 2 sample reviews with proper structure including Hindi titles, ratings, tags, and metadata."
 
 frontend:
   - task: "Mobile App Base Navigation"
