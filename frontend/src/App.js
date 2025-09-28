@@ -50,6 +50,8 @@ const Home = () => {
   );
 };
 
+import AdminMigration from './pages/AdminMigration';
+
 function App() {
   return (
     <div className="App">
@@ -61,6 +63,7 @@ function App() {
           <Route path="/bollywood" element={<div className="p-8 text-center">Bollywood page coming soon...</div>} />
           <Route path="/south" element={<div className="p-8 text-center">South Cinema page coming soon...</div>} />
           <Route path="/international" element={<div className="p-8 text-center">International page coming soon...</div>} />
+          <Route path="/admin/migration" element={<AdminMigration />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
