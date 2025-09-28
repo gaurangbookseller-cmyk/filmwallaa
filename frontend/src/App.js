@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import FeaturedReviews from './components/FeaturedReviews';
+import QuickSubscribe from './components/QuickSubscribe';
 import { Toaster } from './components/ui/sonner';
 
 const Home = () => {
