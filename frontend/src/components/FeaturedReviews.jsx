@@ -38,7 +38,7 @@ const FeaturedReviews = () => {
           <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
             Latest Reviews
           </h2>
-          <p className="text-xl text-gray-600 mb-2">ताज़ा समीक्षाएं</p>
+          <p className="text-xl text-gray-600 mb-2">Professional Movie Reviews</p>
           <p className="text-gray-500 max-w-2xl mx-auto">
             Expert reviews of the latest movies from our professional critics
           </p>
