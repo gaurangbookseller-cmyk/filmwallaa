@@ -28,7 +28,7 @@ const Header = () => {
       {/* Top Bar */}
       <div className="bg-black/20 text-white text-xs py-2">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
-          <span>भारतीय सिनेमा की आवाज़ | The Voice of Indian Cinema</span>
+          <span>The Voice of Indian Cinema | भारतीय सिनेमा की आवाज़</span>
           <div className="flex items-center space-x-4">
             <span>आज: {new Date().toLocaleDateString('hi-IN')}</span>
             <DropdownMenu>
