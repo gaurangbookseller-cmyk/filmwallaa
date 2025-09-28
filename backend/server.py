@@ -59,6 +59,10 @@ async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
 
+# Import route modules after environment is loaded
+from routes.movies import router as movies_router
+from routes.reviews import router as reviews_router
+
 # Include route modules
 api_router.include_router(movies_router)
 api_router.include_router(reviews_router)
