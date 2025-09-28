@@ -72,6 +72,31 @@ export const api = {
       });
       return response.data;
     }
+  },
+
+  // Subscriptions
+  subscriptions: {
+    subscribe: async (subscriptionData) => {
+      const response = await apiClient.post('/subscriptions/subscribe', subscriptionData);
+      return response.data;
+    },
+    
+    quickSubscribe: async (emailData) => {
+      const response = await apiClient.post('/subscriptions/quick-subscribe', emailData);
+      return response.data;
+    },
+    
+    unsubscribe: async (email) => {
+      const response = await apiClient.post('/subscriptions/unsubscribe', null, {
+        params: { email }
+      });
+      return response.data;
+    },
+    
+    sendWeeklyDigest: async () => {
+      const response = await apiClient.post('/subscriptions/send-weekly-digest');
+      return response.data;
+    }
   }
 };
 
