@@ -111,14 +111,14 @@ const Hero = () => {
               className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white border-0 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Play className="h-5 w-5 mr-2 fill-current" />
-              पूरा रिव्यू पढ़ें
+              Read Full Review
             </Button>
             <Button
               variant="outline"
               size="lg"
               className="border-white/30 text-white hover:bg-white/10 px-8 py-3 text-lg"
             >
-              ट्रेलर देखें
+              Watch Trailer
             </Button>
           </div>
 
