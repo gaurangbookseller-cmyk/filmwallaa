@@ -17,12 +17,12 @@ const Header = () => {
   const [isSubscriptionModalOpen, setIsSubscriptionModalOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', nameHi: 'होम', href: '/' },
-    { name: 'Reviews', nameHi: 'रिव्यूज', href: '/reviews' },
-    { name: 'News', nameHi: 'न्यूज', href: '/news' },
-    { name: 'Bollywood', nameHi: 'बॉलीवुड', href: '/bollywood' },
-    { name: 'South Cinema', nameHi: 'साउथ सिनेमा', href: '/south' },
-    { name: 'International', nameHi: 'इंटरनेशनल', href: '/international' }
+    { name: 'Home', href: '/' },
+    { name: 'Reviews', href: '/reviews' },
+    { name: 'News', href: '/news' },
+    { name: 'Bollywood', href: '/bollywood' },
+    { name: 'South Cinema', href: '/south' },
+    { name: 'International', href: '/international' }
   ];
 
   return (
