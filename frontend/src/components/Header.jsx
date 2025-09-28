@@ -32,7 +32,12 @@ const Header = () => {
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
           <span>The Voice of Cinema - Your Gateway to Indian Entertainment</span>
           <div className="flex items-center space-x-4">
-            <span>आज: {new Date().toLocaleDateString('hi-IN')}</span>
+            <span>Today: {new Date().toLocaleDateString('en-US', { 
+              weekday: 'long', 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}</span>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="sm" className="text-white hover:text-orange-200">
