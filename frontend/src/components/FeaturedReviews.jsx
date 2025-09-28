@@ -29,7 +29,9 @@ const FeaturedReviews = () => {
         </div>
       </section>
     );
-  }\n  \n  return (
+  }
+  
+  return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
