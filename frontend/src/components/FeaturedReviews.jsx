@@ -63,7 +63,7 @@ const FeaturedReviews = () => {
             size="lg"
             className="border-orange-300 text-orange-600 hover:bg-orange-50 px-8 py-3"
           >
-            सभी समीक्षाएं देखें
+            View All Reviews
             <ArrowRight className="h-4 w-4 ml-2" />
           </Button>
         </div>
