@@ -78,7 +78,7 @@ class EmailService:
                 <p><strong>Follow us:</strong> Stay connected for the latest updates!</p>
             </div>
             <div class="footer">
-                <p>© 2025 The Voice of Cinema | FILMWALLAA.COM</p>
+                <p>© 2025 Filmwalla.com | FILMWALLAA.COM</p>
                 <p>You're receiving this because you subscribed to our updates.</p>
                 <p><a href="{{ unsubscribe_url }}">Unsubscribe</a> | <a href="https://filmwallaa.com">Visit Website</a></p>
             </div>
@@ -164,7 +164,7 @@ Unsubscribe: https://filmwallaa.com/unsubscribe?email={email}
                 <a href="https://filmwallaa.com" class="btn">Visit FILMWALLAA.COM</a>
             </div>
             <div class="footer">
-                <p>© 2025 The Voice of Cinema | FILMWALLAA.COM</p>
+                <p>© 2025 Filmwalla.com | FILMWALLAA.COM</p>
                 <p>You're receiving this weekly digest because you subscribed to our updates.</p>
                 <p><a href="{{ unsubscribe_url }}">Unsubscribe</a> | <a href="https://filmwallaa.com">Manage Preferences</a></p>
             </div>
