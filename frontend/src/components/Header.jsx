@@ -14,6 +14,7 @@ import { supportedLanguages } from '../data/mockData';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState('hi');
+  const [isSubscriptionModalOpen, setIsSubscriptionModalOpen] = useState(false);
 
   const navigation = [
     { name: 'Home', nameHi: 'होम', href: '/' },
