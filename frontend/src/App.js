@@ -1,38 +1,32 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import React from 'react';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import FeaturedReviews from './components/FeaturedReviews';
+import { Toaster } from './components/ui/sonner';
 
 const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
-  useEffect(() => {
-    helloWorldApi();
-  }, []);
-
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
+    <div className="min-h-screen bg-white">
+      <Header />
+      <Hero />
+      <FeaturedReviews />
+      
+      {/* Placeholder sections for future development */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">फिल्म समाचार</h2>
+          <p className="text-gray-600">Latest cinema news coming soon...</p>
+        </div>
+      </section>
+      
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">श्रेणियां</h2>
+          <p className="text-gray-600">Movie categories and collections coming soon...</p>
+        </div>
+      </section>
     </div>
   );
 };
@@ -42,11 +36,15 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/reviews" element={<div className="p-8 text-center">Reviews page coming soon...</div>} />
+          <Route path="/news" element={<div className="p-8 text-center">News page coming soon...</div>} />
+          <Route path="/bollywood" element={<div className="p-8 text-center">Bollywood page coming soon...</div>} />
+          <Route path="/south" element={<div className="p-8 text-center">South Cinema page coming soon...</div>} />
+          <Route path="/international" element={<div className="p-8 text-center">International page coming soon...</div>} />
         </Routes>
       </BrowserRouter>
+      <Toaster />
     </div>
   );
 }
