@@ -72,7 +72,7 @@ const Header = () => {
                 href={item.href}
                 className="text-white hover:text-orange-200 transition-colors duration-200 font-medium"
               >
-                {currentLang === 'hi' ? item.name : item.nameEng}
+                {currentLang === 'hi' ? item.nameHi : item.name}
               </a>
             ))}
           </nav>
@@ -128,7 +128,7 @@ const Header = () => {
                 className="block text-white hover:text-orange-200 transition-colors duration-200 py-2 border-b border-white/10"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {currentLang === 'hi' ? item.name : item.nameEng}
+                {currentLang === 'hi' ? item.nameHi : item.name}
               </a>
             ))}
           </nav>
