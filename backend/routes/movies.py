@@ -1,15 +1,17 @@
 from fastapi import APIRouter, HTTPException, Query
 from typing import List, Optional
-from models import MovieResponse, MovieCreate
-from tmdb_service import tmdb_service
-from motor.motor_asyncio import AsyncIOMotorClient
 import os
 from datetime import datetime
 import logging
 
-logger = logging.getLogger(__name__)
+# Import these after environment is loaded
+import sys
+sys.path.append('/app/backend')
+from models import MovieResponse, MovieCreate
+from tmdb_service import tmdb_service
+from motor.motor_asyncio import AsyncIOMotorClient
 
-# MongoDB connection will be initialized in each function
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/movies", tags=["movies"])
 
