@@ -17,6 +17,11 @@ router = APIRouter(prefix="/movies", tags=["movies"])
 async def get_featured_movies():
     """Get featured movies from trending and popular lists"""
     try:
+        # MongoDB connection
+        mongo_url = os.environ['MONGO_URL']
+        client = AsyncIOMotorClient(mongo_url)
+        db = client[os.environ['DB_NAME']]
+        
         # Get trending movies from TMDB
         trending_movies = tmdb_service.get_trending_movies()
         
