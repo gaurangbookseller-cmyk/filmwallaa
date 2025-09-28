@@ -12,7 +12,7 @@ class EmailService:
     def __init__(self):
         self.api_key = os.getenv('SENDGRID_API_KEY', 'your_sendgrid_key_here')
         self.sender_email = os.getenv('SENDER_EMAIL', 'noreply@filmwallaa.com')
-        self.sender_name = os.getenv('SENDER_NAME', 'The Voice of Cinema')
+        self.sender_name = os.getenv('SENDER_NAME', 'Filmwalla.com')
         self.sg = SendGridAPIClient(self.api_key) if self.api_key != 'your_sendgrid_key_here' else None
         
     def send_email(self, to_emails: List[str], subject: str, html_content: str, plain_content: str = None):
