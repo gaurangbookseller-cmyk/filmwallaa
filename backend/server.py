@@ -1,3 +1,7 @@
+# Import route modules
+from routes.movies import router as movies_router
+from routes.reviews import router as reviews_router
+
 from fastapi import FastAPI, APIRouter
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
@@ -10,7 +14,6 @@ from typing import List
 import uuid
 from datetime import datetime
 
-
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
@@ -20,13 +23,12 @@ client = AsyncIOMotorClient(mongo_url)
 db = client[os.environ['DB_NAME']]
 
 # Create the main app without a prefix
-app = FastAPI()
+app = FastAPI(title="The Voice of Cinema API", version="1.0.0")
 
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
-
-# Define Models
+# Define Models for basic endpoints
 class StatusCheck(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     client_name: str
@@ -35,10 +37,19 @@ class StatusCheck(BaseModel):
 class StatusCheckCreate(BaseModel):
     client_name: str
 
-# Add your routes to the router instead of directly to app
+# Basic health check routes
 @api_router.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "The Voice of Cinema API is running"}
+
+@api_router.get("/health")
+async def health_check():
+    return {
+        "status": "healthy",
+        "service": "The Voice of Cinema API", 
+        "version": "1.0.0",
+        "timestamp": datetime.utcnow()
+    }
 
 @api_router.post("/status", response_model=StatusCheck)
 async def create_status_check(input: StatusCheckCreate):
@@ -51,6 +62,10 @@ async def create_status_check(input: StatusCheckCreate):
 async def get_status_checks():
     status_checks = await db.status_checks.find().to_list(1000)
     return [StatusCheck(**status_check) for status_check in status_checks]
+
+# Include route modules
+api_router.include_router(movies_router)
+api_router.include_router(reviews_router)
 
 # Include the router in the main app
 app.include_router(api_router)
