@@ -146,6 +146,16 @@ const Header = () => {
           </nav>
         </div>
       )}
+      
+      {/* Subscription Modal */}
+      <SubscriptionModal 
+        isOpen={isSubscriptionModalOpen}
+        onClose={() => setIsSubscriptionModalOpen(false)}
+        onSuccess={() => {
+          console.log('Subscription successful!');
+          // You can add success tracking here
+        }}
+      />
     </header>
   );
 };
