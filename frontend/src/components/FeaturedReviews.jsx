@@ -36,9 +36,9 @@ const FeaturedReviews = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
-            ताज़ा समीक्षाएं
+            Latest Reviews
           </h2>
-          <p className="text-xl text-gray-600 mb-2">Latest Reviews</p>
+          <p className="text-xl text-gray-600 mb-2">ताज़ा समीक्षाएं</p>
           <p className="text-gray-500 max-w-2xl mx-auto">
             हमारे विशेषज्ञ समीक्षकों द्वारा नवीनतम फिल्मों की गहरी और निष्पक्ष समीक्षा
           </p>
