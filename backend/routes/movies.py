@@ -100,6 +100,11 @@ async def search_movies(
 async def get_movie_details(movie_id: str):
     """Get detailed movie information"""
     try:
+        # MongoDB connection
+        mongo_url = os.environ['MONGO_URL']
+        client = AsyncIOMotorClient(mongo_url)
+        db = client[os.environ['DB_NAME']]
+        
         # Try to find movie in database first
         movie = await db.movies.find_one({"id": movie_id})
         if movie:
