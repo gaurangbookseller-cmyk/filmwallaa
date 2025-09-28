@@ -11,7 +11,25 @@ const FeaturedReviews = () => {
   const { reviews: latestReviews, loading, error } = useLatestReviews(3);
   
   if (loading) {
-    return (\n      <section className=\"py-16 bg-gradient-to-b from-gray-50 to-white\">\n        <div className=\"max-w-7xl mx-auto px-4 text-center\">\n          <LoadingSpinner size=\"lg\" />\n          <p className=\"mt-4 text-gray-600\">Loading latest reviews...</p>\n        </div>\n      </section>\n    );\n  }\n  \n  if (error || !latestReviews.length) {\n    return (\n      <section className=\"py-16 bg-gradient-to-b from-gray-50 to-white\">\n        <div className=\"max-w-7xl mx-auto px-4\">\n          <ErrorMessage message={error || \"No reviews available\"} />\n        </div>\n      </section>\n    );\n  }\n  \n  return (
+    return (
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <LoadingSpinner size="lg" />
+          <p className="mt-4 text-gray-600">Loading latest reviews...</p>
+        </div>
+      </section>
+    );
+  }
+  
+  if (error || !latestReviews.length) {
+    return (
+      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <ErrorMessage message={error || "No reviews available"} />
+        </div>
+      </section>
+    );
+  }\n  \n  return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
