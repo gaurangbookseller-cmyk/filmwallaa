@@ -94,7 +94,7 @@ class EmailService:
         plain_content = f"""
 Welcome to The Voice of Cinema!{'  ' + name if name else ''}
 
-Thank you for subscribing to The Voice of Cinema - your premier destination for Indian cinema reviews.
+Thank you for subscribing to Filmwalla.com - your premier destination for Indian cinema reviews.
 
 What to Expect:
 - Weekly digest of top movie reviews
