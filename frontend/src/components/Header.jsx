@@ -90,6 +90,16 @@ const Header = () => {
               <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/70" />
             </div>
             
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className="text-white hover:text-orange-200"
+              onClick={() => setIsSubscriptionModalOpen(true)}
+            >
+              <Mail className="h-5 w-5 mr-1" />
+              <span className="hidden md:inline">Subscribe</span>
+            </Button>
+            
             <Button variant="ghost" size="sm" className="text-white hover:text-orange-200">
               <User className="h-5 w-5" />
             </Button>
