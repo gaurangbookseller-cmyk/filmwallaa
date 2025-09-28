@@ -62,7 +62,7 @@ class EmailService:
             </div>
             <div class="content">
                 <h2>Welcome{% if name %} {{ name }}{% endif %}! 🙏</h2>
-                <p>Thank you for subscribing to <strong>The Voice of Cinema</strong> - your premier destination for Indian cinema reviews and entertainment news.</p>
+                <p>Thank you for subscribing to <strong>Filmwalla.com</strong> - your premier destination for Indian cinema reviews and entertainment news.</p>
                 
                 <h3>What to Expect:</h3>
                 <ul>
