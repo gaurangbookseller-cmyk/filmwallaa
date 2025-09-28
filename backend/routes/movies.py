@@ -78,6 +78,7 @@ async def search_movies(
             
             existing_movie = await db.movies.find_one({"tmdb_id": movie_data['tmdb_id']})
             if existing_movie:
+                existing_movie['id'] = str(existing_movie.pop('_id'))
                 search_results.append(MovieResponse(**existing_movie))
             else:
                 result = await db.movies.insert_one(movie_data)
