@@ -7,6 +7,9 @@ import { Ionicons } from '@expo/vector-icons';
 import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 
+// Import components
+import ErrorBoundary from './src/components/ErrorBoundary';
+
 // Import screens
 import HomeScreen from './src/screens/HomeScreen';
 import ReviewsScreen from './src/screens/ReviewsScreen';
