@@ -89,7 +89,7 @@ logger = logging.getLogger(__name__)
 
 @app.on_event("startup")
 async def startup_event():
-    logger.info("The Voice of Cinema API started successfully")
+    logger.info("Filmwalla.com API started successfully")
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
