@@ -11,10 +11,16 @@ import { Toaster } from './components/ui/sonner';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <MainLayout>
       <Hero />
+      
+      {/* Inline Ad after Hero */}
+      <InlineAd type="banner" position="after-hero" />
+      
       <FeaturedReviews />
+      
+      {/* Inline Product Ad between sections */}
+      <InlineAd type="product" position="between-reviews" />
       
       {/* Newsletter Subscription */}
       <section className="py-16 bg-white">
@@ -23,11 +29,13 @@ const Home = () => {
         </div>
       </section>
       
+      {/* Text Ad for Premium Content */}
+      <InlineAd type="text" position="before-footer" />
+      
       {/* Placeholder sections for future development */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Cinema News</h2>
-          <h3 className="text-xl text-gray-700 mb-4">फिल्म समाचार</h3>
           <p className="text-gray-600">Breaking entertainment news and industry updates coming soon...</p>
         </div>
       </section>
@@ -35,11 +43,10 @@ const Home = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Movie Categories</h2>
-          <h3 className="text-xl text-gray-700 mb-4">श्रेणियां</h3>
           <p className="text-gray-600">Bollywood, South Cinema, International collections coming soon...</p>
         </div>
       </section>
-    </div>
+    </MainLayout>
   );
 };
 
