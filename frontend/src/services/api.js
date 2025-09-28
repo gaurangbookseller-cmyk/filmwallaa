@@ -97,6 +97,43 @@ export const api = {
       const response = await apiClient.post('/subscriptions/send-weekly-digest');
       return response.data;
     }
+  },
+
+  // Migration
+  migration: {
+    startMigration: async () => {
+      const response = await apiClient.post('/migration/start-wordpress-migration');
+      return response.data;
+    },
+    
+    getStatus: async () => {
+      const response = await apiClient.get('/migration/status');
+      return response.data;
+    },
+    
+    getPreviewPosts: async (limit = 20, skip = 0) => {
+      const response = await apiClient.get('/migration/preview-posts', {
+        params: { limit, skip }
+      });
+      return response.data;
+    },
+    
+    getFailedMappings: async () => {
+      const response = await apiClient.get('/migration/failed-mappings');
+      return response.data;
+    },
+    
+    approveReview: async (approvalData) => {
+      const response = await apiClient.post('/migration/approve-review', approvalData);
+      return response.data;
+    },
+    
+    createManualMapping: async (postId, tmdbId) => {
+      const response = await apiClient.post('/migration/manual-movie-mapping', null, {
+        params: { post_id: postId, tmdb_id: tmdbId }
+      });
+      return response.data;
+    }
   }
 };
 
