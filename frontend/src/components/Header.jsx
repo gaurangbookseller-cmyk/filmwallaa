@@ -109,7 +109,7 @@ const Header = () => {
           <div className="relative">
             <Input
               type="text"
-              placeholder="फिल्म खोजें..."
+              placeholder="Search movies..."
               className="bg-white/20 border-white/30 text-white placeholder:text-white/70 pr-10"
             />
             <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white/70" />
