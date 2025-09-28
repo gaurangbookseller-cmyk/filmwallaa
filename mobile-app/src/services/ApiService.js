@@ -1,7 +1,8 @@
 import axios from 'axios';
+import Constants from 'expo-constants';
 
-// Use the same backend URL as your web app
-const BASE_URL = 'https://bollycritics.preview.emergentagent.com/api';
+// Use environment variable for API URL
+const BASE_URL = Constants.expoConfig?.extra?.apiUrl || process.env.EXPO_PUBLIC_API_URL || 'http://localhost:8001/api';
 
 class ApiService {
   constructor() {
