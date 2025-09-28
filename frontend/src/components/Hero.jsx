@@ -27,7 +27,9 @@ const Hero = () => {
         />
       </section>
     );
-  }\n  \n  const featuredMovie = featuredMovies[0];
+  }
+  
+  const featuredMovie = featuredMovies[0];
 
   return (
     <section className="relative h-[80vh] overflow-hidden">
