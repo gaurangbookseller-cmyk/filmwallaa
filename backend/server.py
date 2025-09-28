@@ -62,10 +62,12 @@ async def get_status_checks():
 # Import route modules after environment is loaded
 from routes.movies import router as movies_router
 from routes.reviews import router as reviews_router
+from routes.subscriptions import router as subscriptions_router
 
 # Include route modules
 api_router.include_router(movies_router)
 api_router.include_router(reviews_router)
+api_router.include_router(subscriptions_router)
 
 # Include the router in the main app
 app.include_router(api_router)
