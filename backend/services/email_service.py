@@ -57,7 +57,7 @@ class EmailService:
         </head>
         <body>
             <div class="header">
-                <h1>🎭 The Voice of Cinema</h1>
+                <h1>🎭 Filmwalla.com</h1>
                 <p>Your Gateway to Indian Entertainment</p>
             </div>
             <div class="content">
@@ -136,7 +136,7 @@ Unsubscribe: https://filmwallaa.com/unsubscribe?email={email}
         </head>
         <body>
             <div class="header">
-                <h1>🎭 The Voice of Cinema</h1>
+                <h1>🎭 Filmwalla.com</h1>
                 <p>Weekly Cinema Digest - {{ date }}</p>
             </div>
             <div class="content">
