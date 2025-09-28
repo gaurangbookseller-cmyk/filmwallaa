@@ -130,7 +130,7 @@ export default function App() {
   }
 
   return (
-    <>
+    <ErrorBoundary>
       <StatusBar style="light" backgroundColor="#f97316" />
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
@@ -142,7 +142,8 @@ export default function App() {
               headerShown: true,
               headerStyle: { backgroundColor: '#f97316' },
               headerTintColor: '#ffffff',
-              headerTitle: 'Review Details'
+              headerTitle: 'Review Details',
+              headerBackTitle: 'Back'
             }}
           />
           <Stack.Screen 
@@ -152,11 +153,12 @@ export default function App() {
               headerShown: true,
               headerStyle: { backgroundColor: '#f97316' },
               headerTintColor: '#ffffff',
-              headerTitle: 'Search Movies'
+              headerTitle: 'Search Movies',
+              headerBackTitle: 'Back'
             }}
           />
         </Stack.Navigator>
       </NavigationContainer>
-    </>
+    </ErrorBoundary>
   );
 }
