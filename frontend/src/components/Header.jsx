@@ -15,12 +15,12 @@ const Header = () => {
   const [currentLang, setCurrentLang] = useState('hi');
 
   const navigation = [
-    { name: 'होम', nameEng: 'Home', href: '/' },
-    { name: 'रिव्यूज', nameEng: 'Reviews', href: '/reviews' },
-    { name: 'न्यूज', nameEng: 'News', href: '/news' },
-    { name: 'बॉलीवुड', nameEng: 'Bollywood', href: '/bollywood' },
-    { name: 'साउथ सिनेमा', nameEng: 'South Cinema', href: '/south' },
-    { name: 'इंटरनेशनल', nameEng: 'International', href: '/international' }
+    { name: 'Home', nameHi: 'होम', href: '/' },
+    { name: 'Reviews', nameHi: 'रिव्यूज', href: '/reviews' },
+    { name: 'News', nameHi: 'न्यूज', href: '/news' },
+    { name: 'Bollywood', nameHi: 'बॉलीवुड', href: '/bollywood' },
+    { name: 'South Cinema', nameHi: 'साउथ सिनेमा', href: '/south' },
+    { name: 'International', nameHi: 'इंटरनेशनल', href: '/international' }
   ];
 
   return (
