@@ -36,7 +36,7 @@ class StatusCheckCreate(BaseModel):
 # Basic health check routes
 @api_router.get("/")
 async def root():
-    return {"message": "The Voice of Cinema API is running"}
+    return {"message": "Filmwalla.com API is running"}
 
 @api_router.get("/health")
 async def health_check():
