@@ -41,8 +41,6 @@ const FeaturedReviews = () => {
           <p className="text-xl text-gray-600 mb-2">ताज़ा समीक्षाएं</p>
           <p className="text-gray-500 max-w-2xl mx-auto">
             Expert reviews of the latest movies from our professional critics
-            <br />
-            <span className="text-sm">हमारे विशेषज्ञ समीक्षकों द्वारा नवीनतम फिल्मों की गहरी और निष्पक्ष समीक्षा</span>
           </p>
         </div>
 
