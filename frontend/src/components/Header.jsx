@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Search, Menu, Globe, User, Star } from 'lucide-react';
+import { Search, Menu, Globe, User, Star, Mail } from 'lucide-react';
+import SubscriptionModal from './SubscriptionModal';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import {
