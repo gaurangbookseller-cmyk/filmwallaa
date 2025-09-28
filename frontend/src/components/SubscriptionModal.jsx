@@ -31,7 +31,7 @@ const SubscriptionModal = ({ isOpen, onClose, onSuccess }) => {
 
       setSubmitStatus({
         type: 'success',
-        message: 'Successfully subscribed! Welcome to The Voice of Cinema family! 🎬'
+        message: 'Successfully subscribed! Welcome to the Filmwalla.com family! 🎬'
       });
 
       if (onSuccess) onSuccess();
