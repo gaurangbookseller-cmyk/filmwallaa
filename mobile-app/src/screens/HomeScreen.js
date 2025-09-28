@@ -71,72 +71,74 @@ const HomeScreen = ({ navigation }) => {
   }
 
   return (
-    <ScrollView
-      style={styles.container}
-      refreshControl={
-        <RefreshControl
-          refreshing={refreshing}
-          onRefresh={onRefresh}
-          colors={['#f97316']}
-        />
-      }
-    >
-      {/* Header Banner */}
-      <LinearGradient
-        colors={['#f97316', '#dc2626']}
-        style={styles.headerBanner}
+    <ErrorBoundary>
+      <ScrollView
+        style={styles.container}
+        refreshControl={
+          <RefreshControl
+            refreshing={refreshing}
+            onRefresh={onRefresh}
+            colors={['#f97316']}
+          />
+        }
       >
-        <Text style={styles.headerTitle}>Welcome to Filmwalla.com</Text>
-        <Text style={styles.headerSubtitle}>Your Gateway to Entertainment</Text>
-        <TouchableOpacity
-          style={styles.searchButton}
-          onPress={() => navigation.navigate('Search')}
+        {/* Header Banner */}
+        <LinearGradient
+          colors={['#f97316', '#dc2626']}
+          style={styles.headerBanner}
         >
-          <Ionicons name="search" size={20} color="#f97316" />
-          <Text style={styles.searchButtonText}>Search Movies...</Text>
-        </TouchableOpacity>
-      </LinearGradient>
+          <Text style={styles.headerTitle}>Welcome to Filmwalla.com</Text>
+          <Text style={styles.headerSubtitle}>Your Gateway to Entertainment</Text>
+          <TouchableOpacity
+            style={styles.searchButton}
+            onPress={() => navigation.navigate('Search')}
+          >
+            <Ionicons name="search" size={20} color="#f97316" />
+            <Text style={styles.searchButtonText}>Search Movies...</Text>
+          </TouchableOpacity>
+        </LinearGradient>
 
-      {/* Featured Movies */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Featured Movies</Text>
-        <FlatList
-          data={featuredMovies}
-          renderItem={({ item }) => <FeaturedMovieCard movie={item} />}
-          keyExtractor={(item) => item.id.toString()}
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={styles.featuredList}
-        />
-      </View>
+        {/* Featured Movies */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Featured Movies</Text>
+          <FlatList
+            data={featuredMovies}
+            renderItem={({ item }) => <FeaturedMovieCard movie={item} />}
+            keyExtractor={(item) => item.id.toString()}
+            horizontal
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={styles.featuredList}
+          />
+        </View>
 
-      {/* Latest Reviews */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Latest Reviews</Text>
-        {latestReviews.map((review) => (
-          <ReviewCard key={review.id} review={review} />
-        ))}
-        <TouchableOpacity
-          style={styles.viewAllButton}
-          onPress={() => navigation.navigate('Reviews')}
-        >
-          <Text style={styles.viewAllText}>View All Reviews</Text>
-          <Ionicons name="arrow-forward" size={16} color="#f97316" />
-        </TouchableOpacity>
-      </View>
+        {/* Latest Reviews */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Latest Reviews</Text>
+          {latestReviews.map((review) => (
+            <ReviewCardComponent key={review.id} review={review} />
+          ))}
+          <TouchableOpacity
+            style={styles.viewAllButton}
+            onPress={() => navigation.navigate('Reviews')}
+          >
+            <Text style={styles.viewAllText}>View All Reviews</Text>
+            <Ionicons name="arrow-forward" size={16} color="#f97316" />
+          </TouchableOpacity>
+        </View>
 
-      {/* News Section Preview */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Cinema News</Text>
-        <TouchableOpacity
-          style={styles.newsPreview}
-          onPress={() => navigation.navigate('News')}
-        >
-          <Text style={styles.newsText}>Stay updated with latest cinema news and industry trends</Text>
-          <Ionicons name="newspaper" size={24} color="#f97316" />
-        </TouchableOpacity>
-      </View>
-    </ScrollView>
+        {/* News Section Preview */}
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Cinema News</Text>
+          <TouchableOpacity
+            style={styles.newsPreview}
+            onPress={() => navigation.navigate('News')}
+          >
+            <Text style={styles.newsText}>Stay updated with latest cinema news and industry trends</Text>
+            <Ionicons name="newspaper" size={24} color="#f97316" />
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </ErrorBoundary>
   );
 };
 
