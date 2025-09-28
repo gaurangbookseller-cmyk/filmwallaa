@@ -30,6 +30,8 @@ async def get_featured_movies():
         if not trending_movies:
             # Fallback to cached movies if TMDB fails
             cached_movies = await db.movies.find().limit(4).to_list(4)
+            for movie in cached_movies:
+                movie['id'] = str(movie.pop('_id'))
             return [MovieResponse(**movie) for movie in cached_movies]
         
         # Cache movies in database
