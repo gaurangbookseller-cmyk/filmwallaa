@@ -65,6 +65,11 @@ async def search_movies(
 ):
     """Search movies by title"""
     try:
+        # MongoDB connection
+        mongo_url = os.environ['MONGO_URL']
+        client = AsyncIOMotorClient(mongo_url)
+        db = client[os.environ['DB_NAME']]
+        
         movies = tmdb_service.search_movies(query=q, language=language)
         
         if not movies:
