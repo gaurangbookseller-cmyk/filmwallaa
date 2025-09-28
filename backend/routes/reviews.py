@@ -39,6 +39,7 @@ async def get_latest_reviews(limit: int = 10):
                     "read_time": "8 min read",
                     "image": "https://images.unsplash.com/photo-1489599735429-c1fdf66d61e1?w=800&h=400&fit=crop",
                     "status": "published",
+                    "featured": False,
                     "created_at": datetime.utcnow(),
                     "published_at": datetime.utcnow()
                 },
@@ -55,6 +56,7 @@ async def get_latest_reviews(limit: int = 10):
                     "read_time": "10 min read",
                     "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&h=400&fit=crop",
                     "status": "published",
+                    "featured": True,
                     "created_at": datetime.utcnow(),
                     "published_at": datetime.utcnow()
                 }
