@@ -179,12 +179,12 @@ export const popularSearches = [
 
 // Languages
 export const supportedLanguages = [
-  { code: 'hi', name: 'हिंदी', nameEng: 'Hindi' },
-  { code: 'en', name: 'English', nameEng: 'English' },
-  { code: 'ta', name: 'தமிழ்', nameEng: 'Tamil' },
-  { code: 'te', name: 'తెలుగు', nameEng: 'Telugu' },
-  { code: 'kn', name: 'ಕನ್ನಡ', nameEng: 'Kannada' },
-  { code: 'ml', name: 'മലയാളം', nameEng: 'Malayalam' }
+  { code: 'hi', name: 'Hindi', nameRegional: 'हिंदी' },
+  { code: 'en', name: 'English', nameRegional: 'English' },
+  { code: 'ta', name: 'Tamil', nameRegional: 'தமிழ்' },
+  { code: 'te', name: 'Telugu', nameRegional: 'తెలుగు' },
+  { code: 'kn', name: 'Kannada', nameRegional: 'ಕನ್ನಡ' },
+  { code: 'ml', name: 'Malayalam', nameRegional: 'മലയാളം' }
 ];
 
 export default {
