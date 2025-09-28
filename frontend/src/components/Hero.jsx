@@ -2,7 +2,9 @@ import React from 'react';
 import { Play, Star, Clock, Calendar } from 'lucide-react';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import { featuredMovies } from '../data/mockData';
+import { useFeaturedMovies } from '../hooks/useMovies';
+import LoadingSpinner from './LoadingSpinner';
+import ErrorMessage from './ErrorMessage';
 
 const Hero = () => {
   const featuredMovie = featuredMovies[0];
