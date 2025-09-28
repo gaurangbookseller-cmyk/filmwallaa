@@ -9,10 +9,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-# MongoDB connection
-mongo_url = os.environ['MONGO_URL']
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ['DB_NAME']]
+# MongoDB connection will be initialized in each function
 
 router = APIRouter(prefix="/movies", tags=["movies"])
 
