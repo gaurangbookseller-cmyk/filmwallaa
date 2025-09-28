@@ -67,7 +67,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-white">The Voice of Cinema</h1>
-              <p className="text-orange-200 text-sm">सिनेमा समीक्षा</p>
+              <p className="text-orange-200 text-sm">Indian Entertainment Reviews</p>
             </div>
           </div>
 
