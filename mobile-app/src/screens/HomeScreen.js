@@ -51,85 +51,23 @@ const HomeScreen = ({ navigation }) => {
     loadData();
   };
 
-  const renderStars = (rating) => {
-    const stars = [];
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
-    
-    for (let i = 0; i < fullStars; i++) {
-      stars.push(
-        <Ionicons key={i} name="star" size={16} color="#fbbf24" />
-      );
-    }
-    
-    if (hasHalfStar) {
-      stars.push(
-        <Ionicons key="half" name="star-half" size={16} color="#fbbf24" />
-      );
-    }
-    
-    const emptyStars = 5 - Math.ceil(rating);
-    for (let i = 0; i < emptyStars; i++) {
-      stars.push(
-        <Ionicons key={`empty-${i}`} name="star-outline" size={16} color="#d1d5db" />
-      );
-    }
-    
-    return stars;
-  };
-
   const FeaturedMovieCard = ({ movie }) => (
-    <TouchableOpacity
-      style={styles.featuredCard}
-      onPress={() => navigation.navigate('ReviewDetail', { movieId: movie.id })}
-    >
-      <Image source={{ uri: movie.poster }} style={styles.featuredPoster} />
-      <LinearGradient
-        colors={['transparent', 'rgba(0,0,0,0.8)']}
-        style={styles.featuredGradient}
-      >
-        <Text style={styles.featuredTitle}>{movie.title}</Text>
-        <Text style={styles.featuredYear}>{movie.year} • {movie.industry}</Text>
-        <View style={styles.ratingContainer}>
-          <View style={styles.starsContainer}>
-            {renderStars(movie.rating)}
-          </View>
-          <Text style={styles.ratingText}>{movie.rating}/5</Text>
-        </View>
-      </LinearGradient>
-    </TouchableOpacity>
+    <MovieCard 
+      movie={movie} 
+      onPress={(movie) => navigation.navigate('ReviewDetail', { movieId: movie.id })}
+      style={{ marginRight: 16 }}
+    />
   );
 
-  const ReviewCard = ({ review }) => (
-    <TouchableOpacity
-      style={styles.reviewCard}
-      onPress={() => navigation.navigate('ReviewDetail', { reviewId: review.id })}
-    >
-      <Image source={{ uri: review.image }} style={styles.reviewImage} />
-      <View style={styles.reviewContent}>
-        <Text style={styles.reviewTitle} numberOfLines={2}>
-          {review.title}
-        </Text>
-        <Text style={styles.reviewAuthor}>By {review.author}</Text>
-        <Text style={styles.reviewExcerpt} numberOfLines={3}>
-          {review.excerpt}
-        </Text>
-        <View style={styles.reviewMeta}>
-          <View style={styles.starsContainer}>
-            {renderStars(review.rating)}
-          </View>
-          <Text style={styles.readTime}>{review.read_time}</Text>
-        </View>
-      </View>
-    </TouchableOpacity>
+  const ReviewCardComponent = ({ review }) => (
+    <ReviewCard 
+      review={review} 
+      onPress={(review) => navigation.navigate('ReviewDetail', { reviewId: review.id })}
+    />
   );
 
   if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <Text style={styles.loadingText}>Loading...</Text>
-      </View>
-    );
+    return <LoadingSpinner text="Loading your entertainment feed..." />;
   }
 
   return (
