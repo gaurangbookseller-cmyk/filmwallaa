@@ -104,7 +104,7 @@ What to Expect:
 
 Visit https://filmwallaa.com to explore the latest reviews!
 
-© 2025 The Voice of Cinema | FILMWALLAA.COM
+© 2025 Filmwalla.com | FILMWALLAA.COM
 Unsubscribe: https://filmwallaa.com/unsubscribe?email={email}
         """
         
