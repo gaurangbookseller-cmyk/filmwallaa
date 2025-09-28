@@ -3,7 +3,6 @@ import {
   View,
   Text,
   ScrollView,
-  Image,
   TouchableOpacity,
   StyleSheet,
   Dimensions,
@@ -13,6 +12,10 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
 import ApiService from '../services/ApiService';
+import LoadingSpinner from '../components/LoadingSpinner';
+import MovieCard from '../components/MovieCard';
+import ReviewCard from '../components/ReviewCard';
+import ErrorBoundary from '../components/ErrorBoundary';
 
 const { width } = Dimensions.get('window');
 
