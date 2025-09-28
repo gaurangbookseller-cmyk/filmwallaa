@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -8,7 +8,6 @@ import QuickSubscribe from './components/QuickSubscribe';
 import MainLayout from './components/layout/MainLayout';
 import InlineAd from './components/ads/InlineAd';
 import { Toaster } from './components/ui/sonner';
-import React, { useState, useEffect } from 'react';
 
 const Home = () => {
   return (
